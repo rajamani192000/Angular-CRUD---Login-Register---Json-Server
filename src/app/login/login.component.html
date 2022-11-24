@@ -1,0 +1,46 @@
+<section class="vh-100" style="background-color: #508bfc;">
+  <div class="container py-5 h-100">
+    <div class="row d-flex justify-content-center align-items-center h-100">
+      <div class="col-12 col-md-8 col-lg-6 col-xl-5">
+        <div class="card shadow-2-strong" style="border-radius: 1rem;">
+          <div class="card-body p-5 text-center">
+
+            <h1 class="mb-10">Sign in</h1>
+<form  [formGroup]="login">
+            <div class="form-outline mb-4">
+              <label class="form-label" >Email</label>
+              <input type="email" placeholder="Email" formControlName="email" class="form-control form-control-lg" [ngClass]="{ 'is-invalid': submitted && f['email'].errors }"/>
+              <div *ngIf="submitted && f['email'].errors" class="invalid-feedback">
+                <div *ngIf="f['email'].errors['required']">Email is required</div>
+                <div *ngIf="f['email'].errors['email']">Email is invalid</div>
+              </div>
+            </div>
+
+            <div class="form-outline mb-4">
+              <label class="form-label">Password</label>
+              <input type="password"  placeholder="Password" formControlName="password" class="form-control form-control-lg" [ngClass]="{ 'is-invalid': submitted && f['password'].errors }"/>
+              <div *ngIf="submitted && f['password'].errors" class="invalid-feedback">
+                <div *ngIf="f['password'].errors['required']">Password is required</div>
+                <div *ngIf="f['password'].errors['minlength']">
+                  Password must be at least 6 characters
+                </div>
+                <div *ngIf="f['password'].errors['maxlength']">
+                  Username must not exceed 40 characters
+                </div>
+              </div>
+            </div>
+
+            <button class="btn btn-primary btn-lg btn-block" type="submit" (click)="logindata(login)">Login</button>
+          </form>
+
+            <hr class="my-4">
+            <p class="text-center text-muted mt-5 mb-0">Don't have an account? <a routerLink="/singup" routerLinkActive="active"
+              class="fw-bold text-body"><u>Register here</u></a></p>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+

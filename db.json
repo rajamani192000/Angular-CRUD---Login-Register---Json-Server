@@ -1,0 +1,47 @@
+{
+  "productList": [
+    {
+      "firstname": "Raja",
+      "lastname": "Mani",
+      "username": "rajamani",
+      "email": "rajamani@gmail.com",
+      "telnumber": "7904998687",
+      "password": "rajamani",
+      "confirmPassword": "rajamani",
+      "acceptTerms": true,
+      "id": 12
+    },
+    {
+      "firstname": "shahrukhan",
+      "lastname": "j",
+      "username": "shahrukhan",
+      "email": "shahrukhan@gmail.com",
+      "telnumber": "9566763537",
+      "password": "shahrukhan",
+      "confirmPassword": "shahrukhan",
+      "acceptTerms": true,
+      "id": 13
+    },
+    {
+      "firstname": "tamil",
+      "lastname": "selvan",
+      "username": "tamil",
+      "email": "tamil@gmail.com",
+      "telnumber": "8838337345",
+      "password": "tamil",
+      "confirmPassword": "tamil",
+      "acceptTerms": true,
+      "id": 13
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  }
+}
