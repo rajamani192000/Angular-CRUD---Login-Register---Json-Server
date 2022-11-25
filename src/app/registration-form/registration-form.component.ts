@@ -107,11 +107,11 @@ export class RegistrationFormComponent implements OnInit {
 
   addProduct() {
     this.submitted = true;
-    if (!this.editData) {
       if (this.registerForm.invalid) {
         return;
       }
       if (this.registerForm.valid) {
+        console.log(this.registerForm.value);
         this.api.postProduct(this.registerForm.value).subscribe({
           next: (res) => {
             alert('Product Added Successfully');
@@ -122,8 +122,7 @@ export class RegistrationFormComponent implements OnInit {
             alert('Error While Adding Product');
           },
         });
-      }
-    } else {
+      } else {
       this.updateProduct();
     }
   }

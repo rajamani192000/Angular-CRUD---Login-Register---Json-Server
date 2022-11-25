@@ -50,7 +50,7 @@ export class LoginComponent implements OnInit {
 
   logindata(login: FormGroup) {
     this.submitted = true;
-    // console.log(this.login.value);
+    console.log(this.login.value);
     this.api.getProduct().subscribe((res) => {
       const user = res.find((a: any) => {
         return (

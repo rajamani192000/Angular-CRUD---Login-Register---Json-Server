@@ -1,5 +1,4 @@
 import { MatDialogModule, MAT_DIALOG_DATA, MatDialogRef } from '@angular/material/dialog';
-
 import { RouterModule } from '@angular/router';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
@@ -30,8 +29,7 @@ import { MatSortModule } from '@angular/material/sort';
     BrowserAnimationsModule,
     MatDialogModule,
     MatPaginatorModule,
-    MatSortModule
-
+    MatSortModule,
   ],
   providers: [
     { provide: MatDialogRef, useValue: {} },

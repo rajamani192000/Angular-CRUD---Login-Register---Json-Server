@@ -65,13 +65,4 @@ export class UserDashboardComponent implements OnInit {
     }
   })
   }
-
-  // applyFilter(event: Event): void {
-  //   const filterValue = (event.target as HTMLInputElement).value;
-  //   this.getemployeedata.filter = filterValue.trim().toLowerCase();
-
-  //   if (this.getemployeedata.paginator) {
-  //     this.getemployeedata.paginator.firstPage();
-  //   }
-  // }
 }

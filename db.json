@@ -31,7 +31,18 @@
       "password": "tamil",
       "confirmPassword": "tamil",
       "acceptTerms": true,
-      "id": 13
+      "id": 14
+    },
+    {
+      "firstname": "murali",
+      "lastname": "m",
+      "username": "murali",
+      "email": "murali@gmail.com",
+      "telnumber": "7904998687",
+      "password": "murali",
+      "confirmPassword": "murali",
+      "acceptTerms": true,
+      "id": 15
     }
   ],
   "comments": [
