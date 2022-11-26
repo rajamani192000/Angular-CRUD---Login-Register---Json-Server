@@ -1,47 +1,35 @@
-
-import { AuthService } from './../services/auth.service';
-import { HttpClient } from '@angular/common/http';
-import { Component, OnInit } from '@angular/core';
-import { FormControl, FormGroup, FormBuilder, Validators, AbstractControl } from '@angular/forms';
-import { Router } from '@angular/router';
+import { AuthService } from "./../services/auth.service";
+import { Component, Input, OnInit } from "@angular/core";
+import {
+  FormGroup,
+  FormBuilder,
+  Validators,
+  AbstractControl,
+} from "@angular/forms";
+import { Router } from "@angular/router";
 
 declare var $: any;
 @Component({
-  selector: 'app-login',
-  templateUrl: './login.component.html',
-  styleUrls: ['./login.component.css'],
+  selector: "app-login",
+  templateUrl: "./login.component.html",
+  styleUrls: ["./login.component.css"],
 })
 export class LoginComponent implements OnInit {
-  login: FormGroup = new FormGroup({
-    email: new FormControl(),
-    password: new FormControl(),
-  });
+
+  @Input() subjectchild:any;
+  login: any;
   submitted = false;
   constructor(
-    private _http: HttpClient,
     private _route: Router,
     private api: AuthService,
-    private formBuilder:FormBuilder
+    private formBuilder: FormBuilder
   ) {}
 
   ngOnInit(): void {
-    this.login = this.formBuilder.group(
-      {
-        email: [
-          '',
-          [
-            Validators.required,
-            Validators.email
-          ],
-        ],
-        password: [
-          '',
-          [
-            Validators.required,
-            Validators.pattern('^[a-zA-Z]+$'),
-          ],
-        ],}
-        )
+    this.login = this.formBuilder.group({
+      email: ["", [Validators.required, Validators.email]],
+      password: ["", [Validators.required, Validators.pattern("^[a-zA-Z]+$")]],
+    });
   }
 
   get f(): { [key: string]: AbstractControl } {
@@ -60,12 +48,12 @@ export class LoginComponent implements OnInit {
       });
 
       if (user) {
-        alert('you are successfully login');
+        alert("you are successfully login");
         this.login.reset();
-        this._route.navigate(['dashboard']);
+        this._route.navigate(["dashboard"]);
       } else {
-        alert('User Not Found');
-        this._route.navigate(['login']);
+        alert("User Not Found");
+        this._route.navigate(["login"]);
       }
     });
   }
